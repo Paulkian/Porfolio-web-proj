@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "poppins";
+}
+body{
+    background-color: #f2f2f2;
+    overflow-x: hidden;
+}
+.title {
+    position: absolute; 
+    top: 42%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    color: #101010; 
+    z-index: 99999; 
+    opacity: 0; 
+}
+
+#preloader {
+    width: 100vw; 
+    height: 100vh; 
+    background: #000000; 
+    position: fixed; 
+    display: grid; 
+    align-items: center; 
+    justify-content: center;
+    z-index: 1;
+}
+
+.loading__text {
+    letter-spacing: 30px; 
+    color: #fff; 
+    font-weight: 700; 
+    position: relative; 
+    top: -50px; 
+    pointer-events: none;
+    user-select: none;  
+    text-align: center;
+}
+
+.pace {
+    pointer-events: none;
+    user-select: none;
+    z-index: 2000; 
+    position: fixed; 
+    margin: auto; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    width: 400px; 
+    border: 0; 
+    height: 1px; 
+    overflow: hidden; 
+    background: #1b1b1b; 
+}
+
+.pace .pace-progress {
+    max-width: 400px; 
+    position: absolute; 
+    z-index: 2000; 
+    top: 0; 
+    right: 100%; 
+    height: 100%; 
+    width: 100%; 
+    background: #fff;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: black;
+    background-color: #f2f2f2;
+
+}
+nav .logo{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+nav .nav-links{
+    display: flex;
+    gap: 2rem;
+}
+nav .nav-links .link{
+    cursor: pointer;
+}
+nav .nav-links .link a{
+    color: black;
+    font-size: 1rem;
+    font-weight: 400;
+}
+nav .btn{
+    margin-right: 2rem;
+    background-color: #000000;
+    color: white;
+    padding:  0.4rem 1.5rem;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+nav .btn:hover{
+    background-color: #aeae9d;
+}
+
+.container{
+    max-width: 1400px;
+    position: relative;
+    top: -3rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: space-between;
+}
+.container .content h1{
+    font-size: 3.5rem;
+}
+.container .content p{
+    font-size: 0.9rem;
+}
+.container .content button{
+    margin-top: 1rem;
+    border: none;
+    background-color: #000000;
+    color: #F2F2F2;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+.container .content button:hover{
+    background-color: #aeae9d;
+}
+.container .icons{
+    width: 2rem;
+    display: flex;
+    margin-top: 1rem;
+    gap: 2rem;
+}
+.container .profile-pic{
+    width: 25rem;
+    position: relative;
+    right: -10rem;
+    margin-right: auto;
+    animation: wave 15s ease-in-out infinite;
+}
+@keyframes wave {
+    0% ,100%{
+        border-radius: 50% 70% 70% 30% / 30% 30% 70% 70%
+   
+    }
+    25% { 
+        border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%
+    }
+    50% {
+        border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%
+
+    }
+    75% {
+        border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%		
+    }
+}
+
+.about-me{
+    max-width: 1400px;
+    margin: auto;
+ 
+}
+.about-me h1{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.about-me .about-me-content{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.about-me .about-me-content .contain-sticky{
+    position: sticky;
+    top: 0;
+}
+.about-me .about-me-content img{
+    width: 50%;
+}
+.about-me .about-me-content .info-about-me{
+    padding: 0 2rem 0 2rem;
+    position: sticky;
+    top: 0;
+}
+.about-me .about-me-content .info-about-me h2{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+
+}
+
+.services{
+    max-width: 1400px;
+    margin: auto;
+    padding-top: 5rem;
+}
+.services h1{
+    display:flex;
+    justify-content: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+.services .content-services{
+    margin-bottom: 10rem;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.services .content-services .ser1{
+    width: 29em;
+}
+.services .content-services .ser1 h2{
+    font-size: 2.9rem;
+}
+.services .content-services .ser1-skills{
+    font-size: 2rem;
+    width: 20rem;
+    color: #aeae9d;
+}
+.projects{
+    max-width: 1400px;
+    margin: auto;
+    padding-top: 5rem;
+    
+}
+.projects h1{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.projects .projects-content .proj1{
+    padding-top: 5rem;
+    margin-top: 5rem;
+    max-width: 80rem;
+    margin: auto;
+}
+.projects .projects-content .proj1 img{
+    width: 80rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+.projects .projects-content .proj1 ul{
+    display: flex;
+    gap: 1rem;
+}
+.projects .projects-content .proj1 ul li{
+    border: 2px solid ;
+    border-radius: 30rem;
+    padding:  0.2rem 1rem;
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+}
+.projects .projects-content .proj1 p{
+    font-size: 0.9rem;
+}
+.projects .projects-content .proj2{
+    margin-top: 2rem;
+    width: 50rem;
+    overflow: hidden;
+    overflow: hidden;
+    border-radius: 1rem;
+    float: left;
+}
+.projects .projects-content .proj2 img{
+    width: 75rem;
+    position: relative;
+    left: -12.5rem;
+    border-radius: 2rem;
+}
+.projects .projects-content .proj2 ul{
+    display: flex;
+    gap: 1rem;
+}
+.projects .projects-content .proj2 ul li{
+    border: 2px solid ;
+    border-radius: 30rem;
+    padding:  0.2rem 1rem;
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+}
+.projects .projects-content .proj2 p{
+    font-size: 0.9rem;
+}
+.projects .projects-content .proj3{
+    margin-top: 2rem;
+    width: 35rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    position: relative;
+    left: 5rem;
+    top: -5rem;
+}
+.projects .projects-content .proj3 img{
+    width: 75rem;
+    position: relative;
+    left: -19.5rem;
+    border-radius: 2rem;
+}
+.projects .projects-content .proj3 ul{
+    display: flex;
+    gap: 1rem;
+}
+.projects .projects-content .proj3 ul li{
+    border: 2px solid ;
+    border-radius: 30rem;
+    padding:  0.2rem 1rem;
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+}
+.projects .projects-content .proj3 p{
+    font-size: 0.9rem;
+}
+.projects .projects-content .proj4{
+    margin-top: 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    left: -2rem;
+    float: left;
+}
+.projects .projects-content .proj4 img{
+    width: 65rem;
+    position: relative;
+    border-radius: 1rem; 
+}
+.projects .projects-content .proj4 ul{
+    display: flex;
+    gap: 1rem;
+}
+.projects .projects-content .proj4 ul li{
+    border: 2px solid ;
+    border-radius: 30rem;
+    padding:  0.2rem 1rem;
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+}
+.projects .projects-content .proj4 p{
+    font-size: 0.9rem;
+}
+
+.projects .projects-content .proj5{
+    margin-top: -3rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    width: 22rem;
+}
+.projects .projects-content .proj5 img{
+    width: 20rem;
+    position: relative;
+    border-radius: 1rem; 
+}
+.projects .projects-content .proj5 ul{
+    display: flex;
+    gap: 1rem;
+}
+.projects .projects-content .proj5 ul li{
+    border: 2px solid ;
+    border-radius: 30rem;
+    padding:  0.2rem 1rem;
+    margin-top: 0.8rem;
+    font-size: 0.8rem;
+}
+.projects .projects-content .proj5 p{
+    font-size: 0.8rem;
+}
+
+.contact-me{
+    max-width: 1400px;
+    margin: auto;
+    padding-top: 5rem;
+    
+}
+.contact-me h1{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    margin-bottom: 8rem;
+}
+.contact-me .content-contact{
+    width: 60rem;
+    float: left;
+}
+.contact-me .content-contact h2{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.contact-me .content-contact p{
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+.contact-me .content-contact form input{
+    border: none;
+    border-bottom: 2px solid;
+    width: 20rem;
+    background-color: #f2f2f2;
+    height: 2.5rem;
+    margin-top: 3rem;
+}
+.contact-me .content-contact form .input-name{
+    margin-right: 3rem;
+}
+.contact-me .content-contact form .input-message{
+    width: 72%;
+}
+.contact-me .content-contact button{
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 0.8rem 1.3rem;
+    border-radius: 1rem;
+    margin-top: 3rem;
+    font-weight: 500;
+    margin-bottom: 10rem;
+}
+.contact-me .details{
+    margin-top: 4rem;
+}
+.contact-me .details ul{
+    margin-top: 2rem;
+}
+.contact-me .details ul h3{
+    font-size: 1.2rem;
+
+}
+.contact-me .details ul li{
+    margin-top: 0.8rem;
+    cursor: pointer; 
+}
+.contact-me .details ul li a{
+    color:black;
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
